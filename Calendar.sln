@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.CLI", "Calendar.CLI\Calendar.CLI.csproj", "{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.CLI", "Calendar.CLI\Calendar.CLI.csproj", "{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.Enumerations", "Calendar.Enumerations\Calendar.Enumerations.csproj", "{43EA823E-4B48-4607-B0CB-A3E5B5670FB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Translations", "Calendar.Translations\Calendar.Translations.csproj", "{33323E53-3474-4C7E-9AB8-2F8235C48F90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Themes", "Calendar.Themes\Calendar.Themes.csproj", "{1409C093-7EC0-40ED-914A-697BB6E47327}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +19,20 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212AA5D2-910E-48EC-95A7-1293BAEBBBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43EA823E-4B48-4607-B0CB-A3E5B5670FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43EA823E-4B48-4607-B0CB-A3E5B5670FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43EA823E-4B48-4607-B0CB-A3E5B5670FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43EA823E-4B48-4607-B0CB-A3E5B5670FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33323E53-3474-4C7E-9AB8-2F8235C48F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33323E53-3474-4C7E-9AB8-2F8235C48F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33323E53-3474-4C7E-9AB8-2F8235C48F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33323E53-3474-4C7E-9AB8-2F8235C48F90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1409C093-7EC0-40ED-914A-697BB6E47327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1409C093-7EC0-40ED-914A-697BB6E47327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1409C093-7EC0-40ED-914A-697BB6E47327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1409C093-7EC0-40ED-914A-697BB6E47327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
