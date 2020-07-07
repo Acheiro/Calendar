@@ -15,6 +15,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Core\SimpleCalendar.cs~RF160c75fe.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Calendar.Enumerations\Calendar.Enumerations.csproj" />
     <ProjectReference Include="..\Calendar.Themes\Calendar.Themes.csproj" />
     <ProjectReference Include="..\Calendar.Translations\Calendar.Translations.csproj" />

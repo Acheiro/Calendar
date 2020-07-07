@@ -46,7 +46,7 @@
         public SimpleCalendar DisplayCurrentDate()
         {
             var time = DateTime.Now;
-            var currentDate = $"Today is {time.Day}/{SelectedLanugage.Months[time.Month]}/{time.Year}";
+            var currentDate = $"Today is {time.Day}/{SelectedLanugage.Months[time.Month - 1]}/{time.Year}";
 
             Formatter
                 .Clear()
