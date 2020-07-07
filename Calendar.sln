@@ -7,11 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.CLI", "Calendar.CL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.Enumerations", "Calendar.Enumerations\Calendar.Enumerations.csproj", "{43EA823E-4B48-4607-B0CB-A3E5B5670FB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Translations", "Calendar.Translations\Calendar.Translations.csproj", "{33323E53-3474-4C7E-9AB8-2F8235C48F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.Translations", "Calendar.Translations\Calendar.Translations.csproj", "{33323E53-3474-4C7E-9AB8-2F8235C48F90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Themes", "Calendar.Themes\Calendar.Themes.csproj", "{1409C093-7EC0-40ED-914A-697BB6E47327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calendar.Themes", "Calendar.Themes\Calendar.Themes.csproj", "{1409C093-7EC0-40ED-914A-697BB6E47327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.Output", "Calendar.Output\Calendar.Output.csproj", "{1CF8EA1F-862D-4B96-8800-807016386392}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21E8A878-616C-483B-AA65-FA95684DB70B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +38,6 @@ Global
 		{1409C093-7EC0-40ED-914A-697BB6E47327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1409C093-7EC0-40ED-914A-697BB6E47327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1409C093-7EC0-40ED-914A-697BB6E47327}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CF8EA1F-862D-4B96-8800-807016386392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CF8EA1F-862D-4B96-8800-807016386392}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CF8EA1F-862D-4B96-8800-807016386392}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CF8EA1F-862D-4B96-8800-807016386392}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

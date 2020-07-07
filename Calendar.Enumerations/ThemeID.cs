@@ -1,6 +1,6 @@
 ﻿namespace Calendar.Enumerations
 {
-    public enum Themes : uint
+    public enum ThemeID : uint
     {
         Dark,
         Light

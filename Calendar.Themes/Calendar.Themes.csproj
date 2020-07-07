@@ -12,4 +12,8 @@
     <OutputPath>..\Build\Debug\</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Calendar.Enumerations\Calendar.Enumerations.csproj" />
+  </ItemGroup>
+
 </Project>

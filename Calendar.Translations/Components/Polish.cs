@@ -8,16 +8,23 @@
     /// </summary>
     public sealed class Polish : Language
     {
-        public override Languages Title => Languages.Polish;
+        private string[] NamesOfDays { get; }
+        private string[] NamesOfMonths { get; }
 
-        public override string[] Days => new[] 
-        { 
-            "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela" 
-        };
-
-        public override string[] Months => new[] 
+        public Polish() : base(LanguageID.Polish)
         {
-            "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"
-        };
+            NamesOfDays = new[]
+            {
+                "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"
+            };
+
+            NamesOfMonths = new[]
+            {
+                "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"
+            };
+        }
+
+        public override string[] Days => NamesOfDays;
+        public override string[] Months => NamesOfMonths;
     }
 }

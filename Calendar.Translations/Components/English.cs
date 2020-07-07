@@ -8,16 +8,23 @@
     /// </summary>
     public sealed class English : Language
     {
-        public override Languages Title => Languages.English;
+        private string[] NamesOfDays { get; }
+        private string[] NamesOfMonths { get; }
 
-        public override string[] Days => new[]
+        public English() : base(LanguageID.English) 
         {
-            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-        };
+            NamesOfDays = new[]
+            {
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+            };
 
-        public override string[] Months => new[]
-        {
-            "January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"
-        };
+            NamesOfMonths = new[]
+            {
+                "January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"
+            };
+        }
+
+        public override string[] Days => NamesOfDays;
+        public override string[] Months => NamesOfMonths;
     }
 }

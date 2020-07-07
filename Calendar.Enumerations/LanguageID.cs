@@ -1,6 +1,6 @@
 ﻿namespace Calendar.Enumerations
 {
-    public enum Languages : uint
+    public enum LanguageID : uint
     {
         Polish,
         English

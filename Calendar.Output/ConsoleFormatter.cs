@@ -26,29 +26,29 @@
             return this;
         }
 
-        public ConsoleFormatter DisplayMessage(string message)
+        public ConsoleFormatter DisplayText(string text)
         {
-            Console.WriteLine(message);
+            Console.WriteLine(text);
             return this;
         }
 
-        public ConsoleFormatter DisplayMessages(IEnumerable<string> messages)
+        public ConsoleFormatter DisplayText(IEnumerable<string> text)
         {
-            foreach (var message in messages)
+            foreach (var message in text)
                 Console.WriteLine(message);
 
             return this;
         }
 
-        public ConsoleFormatter DisplayMessageInTheMiddle(string message)
+        public ConsoleFormatter DisplayTextInTheMiddle(string text)
         {
-            Console.WriteLine($"{{0, {Console.WindowWidth / 2 + message.Length / 2}}}", message);
+            Console.WriteLine($"{{0, {Console.WindowWidth / 2 + text.Length / 2}}}", text);
             return this;
         }
 
-        public ConsoleFormatter DisplayMessagesInTheMiddle(IEnumerable<string> messages)
+        public ConsoleFormatter DisplayTextInTheMiddle(IEnumerable<string> text)
         {
-            foreach (var message in messages)
+            foreach (var message in text)
                 Console.WriteLine($"{{0, {Console.WindowWidth / 2 + message.Length / 2}}}", message);
 
             return this;

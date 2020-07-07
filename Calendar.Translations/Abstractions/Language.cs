@@ -7,8 +7,9 @@
     /// </summary>
     public abstract class Language
     {
+        public LanguageID LanguageId { get; }
         public abstract string[] Days { get; }
         public abstract string[] Months { get; }
-        public abstract Languages Title { get; }
+        public Language(LanguageID languageId) => LanguageId = languageId;
     }
 }
