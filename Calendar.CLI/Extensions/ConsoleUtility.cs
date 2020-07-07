@@ -22,6 +22,7 @@
 
         public ConsoleUtility PressToContinue()
         {
+            Console.WriteLine("Press any key to continue..");
             Console.ReadKey();
             return this;
         }
@@ -74,7 +75,9 @@
             if (validator.Invoke(text, true, out var value))
                 return value;
 
-            throw new ArgumentException($"Provided parameter did not match any of the enum values | {string.Join(", ", typeof(T).GetEnumNames())}");
+            DisplayTextInColumn($"\nProvided parameter did not match any of the values. Will proceed with default value.");
+            PressToContinue();
+            return default;
         }
 
         public delegate bool Validator<T>(string? value, bool ignoreCase, out T enumValue);

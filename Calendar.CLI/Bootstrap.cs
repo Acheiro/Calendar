@@ -27,8 +27,6 @@
                 .SetupTheme()
                 .DisplayCurrentDate()
                 .DisplayCalendar();
-
-            Formatter.PressToContinue();
         }
     }
 }
