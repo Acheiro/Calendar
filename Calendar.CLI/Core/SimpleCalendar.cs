@@ -11,6 +11,9 @@
     using Translations.Abstractions;
     using Translations.Components;
 
+    /// <summary>
+    ///     Represents a calendar layout implementation
+    /// </summary>
     public sealed class SimpleCalendar
     {
         private Theme SelectedTheme { get; }
