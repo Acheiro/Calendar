@@ -3,6 +3,9 @@
     using System;
     using System.Collections.Generic;
 
+    /// <summary>
+    ///     Provides an implementation of console output manipulating via method chaining
+    /// </summary>
     public sealed class ConsoleFormatter
     {
         public ConsoleFormatter BreakLine()
