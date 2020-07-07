@@ -6,64 +6,70 @@
     /// <summary>
     ///     Provides an implementation of console output manipulating via method chaining
     /// </summary>
-    internal sealed class ConsoleUtility
+    public sealed class ConsoleUtility
     {
-        internal ConsoleUtility BreakLine()
+        public ConsoleUtility Clear()
+        {
+            Console.Clear();
+            return this;
+        }
+
+        public ConsoleUtility BreakLine()
         {
             Console.WriteLine();
             return this;
         }
 
-        internal ConsoleUtility PressToContinue()
+        public ConsoleUtility PressToContinue()
         {
             Console.ReadKey();
             return this;
         }
 
-        internal ConsoleUtility SetTitle(string title)
+        public ConsoleUtility SetTitle(string title)
         {
             Console.Title = title;
             return this;
         }
 
-        internal ConsoleUtility DisplayText(string text)
-        {
-            Console.WriteLine(text);
-            return this;
-        }
-
-        internal ConsoleUtility DisplayText(IEnumerable<string> text)
-        {
-            foreach (var message in text)
-                Console.WriteLine(message);
-
-            return this;
-        }
-
-        internal ConsoleUtility DisplayTextInTheMiddle(string text)
-        {
-            Console.WriteLine($"{{0, {Console.WindowWidth / 2 + text.Length / 2}}}", text);
-            return this;
-        }
-
-        internal ConsoleUtility DisplayTextInTheMiddle(IEnumerable<string> text)
-        {
-            foreach (var message in text)
-                Console.WriteLine($"{{0, {Console.WindowWidth / 2 + message.Length / 2}}}", message);
-
-            return this;
-        }
-
-        internal ConsoleUtility RetriveInput(out string input)
+        public ConsoleUtility RetriveInput(out string input)
         {
             Console.Write("Enter value: ");
-            
+
             input = Console.ReadLine();
-            
+
             return this;
         }
 
-        internal T ParseInput<T>(ref string text, Validator<T> validator)
+        public ConsoleUtility DisplayTextInRow(string text, string format = null)
+        {
+            Console.Write(format ?? $"{{0}}", text);
+            return this;
+        }
+
+        public ConsoleUtility DisplayTextInColumn(string text, string format = null)
+        {
+            Console.WriteLine(format ?? $"{{0}}", text);
+            return this;
+        }
+
+        public ConsoleUtility DisplayTextInRow(IEnumerable<string> text, string format = null)
+        {
+            foreach (var message in text)
+                Console.Write(format ?? $"{{0}}", message);
+
+            return this;
+        }
+
+        public ConsoleUtility DisplayTextInColumn(IEnumerable<string> text, string format = null)
+        {
+            foreach (var message in text)
+                Console.WriteLine(format ?? $"{{0}}", message);
+
+            return this;
+        }
+
+        public T ParseInput<T>(ref string text, Validator<T> validator)
         {
             if (validator.Invoke(text, true, out var value))
                 return value;
@@ -71,6 +77,6 @@
             throw new ArgumentException($"Provided parameter did not match any of the enum values | {string.Join(", ", typeof(T).GetEnumNames())}");
         }
 
-        internal delegate bool Validator<T>(string? value, bool ignoreCase, out T enumValue);
+        public delegate bool Validator<T>(string? value, bool ignoreCase, out T enumValue);
     }
 }
