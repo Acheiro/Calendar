@@ -59,16 +59,18 @@
 
         public SimpleCalendar DisplayCalendar()
         {
+            var index = 0;
+            var identificator = 1;
             var time = DateTime.Now;
-            var days = DateTime.DaysInMonth(time.Year, time.Month);
-            
-            var namesOfDays = SelectedLanugage.Days.Select(x => x.Substring(0, 3)).ToArray();
-            var numbersOfDays = new string[days];
+            var daysInMonth = DateTime.DaysInMonth(time.Year, time.Month);
+            var firstDayOfMonth = (int)new DateTime(time.Year, time.Month, 1).DayOfWeek;
+            var identificatorsOfDays = new string[35];
 
-            for (var i = 0; i < days; i++)
-                numbersOfDays[i] = $" {i + 1}";
+            while (index++ < identificatorsOfDays.Length)
+                if (index >= firstDayOfMonth && identificator <= daysInMonth)
+                    identificatorsOfDays[index - 1] = $"{identificator++}";
 
-            var final = namesOfDays.Concat(numbersOfDays);
+            var final = SelectedLanugage.GetDaysShortcuts(3).Concat(identificatorsOfDays).ToList();
 
             for (var i = 0; i < 6; i++)
                 Formatter.DisplayTextInRow(i == 0 ? final.Take(7).Append("\n") : final.Skip(7 * i).Take(7).Append("\n"), $"{{0, 14}}");
