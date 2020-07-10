@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalendar.Bootstrap", "SimpleCalendar.Bootstrap\SimpleCalendar.Bootstrap.csproj", "{81170EFF-A844-44DC-ACE9-851072DAE139}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalendar.SDK", "SimpleCalendar.SDK\SimpleCalendar.SDK.csproj", "{0F1D64C7-9819-44D3-95A5-03F29D58875D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81170EFF-A844-44DC-ACE9-851072DAE139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81170EFF-A844-44DC-ACE9-851072DAE139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81170EFF-A844-44DC-ACE9-851072DAE139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81170EFF-A844-44DC-ACE9-851072DAE139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F1D64C7-9819-44D3-95A5-03F29D58875D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1D64C7-9819-44D3-95A5-03F29D58875D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1D64C7-9819-44D3-95A5-03F29D58875D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1D64C7-9819-44D3-95A5-03F29D58875D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ADC3FDB-1169-4F1D-B14A-38844E24DF12}
+	EndGlobalSection
+EndGlobal
