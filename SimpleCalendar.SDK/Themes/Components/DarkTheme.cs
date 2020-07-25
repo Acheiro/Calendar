@@ -2,12 +2,11 @@
 {
     using System;
     using Abstractions;
-    using Enumerations;
 
     public sealed class DarkTheme : Theme
     {
-        public override ThemeID ThemeId => ThemeID.Dark;
-        public override ConsoleColor TextColor => ConsoleColor.Yellow;
-        public override ConsoleColor BackgroundColor => ConsoleColor.Black;
+        protected override ConsoleColor TextColor => ConsoleColor.Yellow;
+
+        protected override ConsoleColor BackgroundColor => ConsoleColor.Black;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SimpleCalendar.SDK.Enumerations
 {
-    public enum LanguageID : uint
+    public enum LanguageID : ushort
     {
         Polish,
         English

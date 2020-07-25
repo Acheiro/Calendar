@@ -14,4 +14,8 @@
     <OutputPath>..\Build\Release\</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleCalendar.SDK\SimpleCalendar.SDK.csproj" />
+  </ItemGroup>
+
 </Project>

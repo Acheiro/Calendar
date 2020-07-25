@@ -1,4 +1,4 @@
-﻿namespace SimpleCalendar.SDK.Extensions
+﻿ namespace SimpleCalendar.SDK.Extensions
 {
     using System;
     using System.Collections.Generic;
@@ -67,16 +67,24 @@
             return this;
         }
 
-        public T ParseInputAsEnum<T>(ref string text, Validator<T> validator) where T : struct
+        public int ParseInputAsInteger(ref string text)
         {
-            if (validator.Invoke(text, true, out var value))
-                return value;
+            if (int.TryParse(text, out var result))
+                return result;
 
             DisplayTextInColumn($"\nProvided parameter did not match any of the values. Will proceed with default value.");
             PressToContinue();
             return default;
         }
 
-        public delegate bool Validator<T>(string? value, bool ignoreCase, out T enumValue);
+        public T ParseInputAsEnum<T>(ref string text) where T : struct
+        {
+            if (Enum.TryParse<T>(text, true, out var result))
+                return result;
+
+            DisplayTextInColumn($"\nProvided parameter did not match any of the values. Will proceed with default value.");
+            PressToContinue();
+            return default;
+        }
     }
 }

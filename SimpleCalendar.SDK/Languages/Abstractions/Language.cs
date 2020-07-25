@@ -6,31 +6,30 @@
 
     public abstract class Language
     {
-        public LanguageID LanguageId { get; }
-        protected string[] NamesOfDays { get; set; }
-        protected string[] NamesOfMonths { get; set; }
+        protected abstract string[] NamesOfDays { get; }
+
+        protected abstract string[] NamesOfMonths { get; }
         
-        public Language(LanguageID languageId) => LanguageId = languageId;
-
-        public abstract void DisplayDate(DateTime date);
-
-        public string[] GetDaysShortcuts(int range)
-            => NamesOfMonths.Select(x => x.Substring(0, range)).ToArray();
-
-        public string GetNameOfDayByNumber(int dayOfTheWeek)
+        internal string GetNameOfDayByNumber(int dayOfTheWeek)
         {
             if (dayOfTheWeek > NamesOfDays.Length)
                 throw new IndexOutOfRangeException($"Provided invalid day index: {dayOfTheWeek}");
 
             return NamesOfDays[dayOfTheWeek - 1];
         }
-        
-        public string GetNameOfMonthByNumber(int monthInTheYear)
+
+        internal string GetNameOfMonthByNumber(int monthInTheYear)
         {
             if (monthInTheYear > NamesOfMonths.Length)
                 throw new IndexOutOfRangeException($"Provided invalid month index: {monthInTheYear}");
 
             return NamesOfMonths[monthInTheYear - 1];
         }
+
+        internal string[] GetDaysShortcuts(int range) 
+            => NamesOfDays.Select(x => x.Substring(0, range)).ToArray();
+
+        internal string GetFormattedDate(DateTime date) 
+            => $"{GetNameOfDayByNumber((int)date.DayOfWeek)}, {date.Day}/{GetNameOfMonthByNumber(date.Month)}/{date.Year}";
     }
 }

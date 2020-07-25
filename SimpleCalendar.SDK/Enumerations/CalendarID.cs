@@ -1,8 +1,7 @@
 ﻿namespace SimpleCalendar.SDK.Enumerations
 {
-    public enum ThemeID : ushort
+    public enum CalendarID : ushort
     {
-        Dark,
-        Light
+        Gregorian
     }
 }
